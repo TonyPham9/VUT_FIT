@@ -1,0 +1,19 @@
+1. projekt
+Poznámky k úkolům:
+	Black Box Testing:
+		Axiom 3: není otestováno
+		Axiom 2: není otestováno
+		Axiom 1: není otestováno
+		INSERT: Při spuštění došlo k selhání. (Možná příčina je opomenutí ASSERT nebo je místo něj EXPECT.)
+	White Box Testing:
+		solveEquation: nedostatečně otestováno
+	Test Driven Development:
+		Došlo k úniku paměti.
+Další problémy: 
+	Nevalidní struktura obsahu archivu.
+Detail k bodům:
+	Black Box Testing: 2.0
+	White Box Testing: 5.5
+	Test Driven Development: 4.5
+	Ostatní: -0.25
+
