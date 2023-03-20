@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--@author Tony Pham, xphamt00-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/wood_texture_dark">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="56sp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/color_style"
+        app:menu="@menu/menu_without_notification_login"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"/>
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_below="@+id/nav"
+        android:background="@drawable/color_style" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/indicator" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="match_parent"
+        android:layout_height="65sp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/color_style"
+        app:backgroundTint="@null"
+        android:text="Search"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

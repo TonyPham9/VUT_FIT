@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--@author Tony Pham, xphamt00-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/wood_texture_dark">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="56sp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/color_style"
+        app:menu="@menu/menu_with_home_profil"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_below="@id/nav"
+        android:id="@+id/pub_detail_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/wood_texture_light"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wood_texture_light"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/pub_name_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Název hospody"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingTop="3dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="25sp"/>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/marble_texture"
+                    android:scaleType="center" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Na čepu:"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/na_cepu_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="75dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="Aktualita:"/>
+                    <TextView
+                        android:id="@+id/popis_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Text"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="75dp"/>
+
+                    <Button
+                        android:id="@+id/navigovat_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="65sp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/color_style"
+                        android:text="Navigovat"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/pub_rating_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pub_detail_card"
+        app:backgroundTint="@null"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/marble_texture"
+                android:isIndicator="true"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pub_detail_card"
+        android:layout_toEndOf="@id/pub_rating_card"
+        app:backgroundTint="@null"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/button_recenze"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/marble_texture"
+                app:backgroundTint="@null"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recenze"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/button_back_to_search"
+        android:layout_width="match_parent"
+        android:layout_height="65sp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/color_style"
+        app:backgroundTint="@null"
+        android:text="@string/zp_t_na_vyhled_v_n"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

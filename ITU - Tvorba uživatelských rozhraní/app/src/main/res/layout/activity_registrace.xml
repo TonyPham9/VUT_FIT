@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--@author Vít Janeček, xjanec30-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistraceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/color_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/menu_with_home" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9">
+
+            <LinearLayout
+                android:id="@+id/input_zaregistrovat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wood_texture_dark"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/nav">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_email_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/wood_texture_light"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wood_texture_light"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zadejte_e"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_email_reg"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@color/cardview_light_background"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_email_reg"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_marginVertical="5dp"
+                                android:background="@color/cardview_light_background"
+                                android:textSize="20sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_prihlasovaci_jmeno_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/wood_texture_light"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wood_texture_light"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zadejte_pj"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_prihlasovaci_jmeno_reg"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@color/cardview_light_background"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_prihlasovaci_jmeno_reg"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_marginVertical="5dp"
+                                android:background="@color/cardview_light_background"
+                                android:textSize="20sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_prihlasovaci_heslo_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wood_texture_light"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zadejte_ph"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_prihlasovaci_heslo1_reg"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginVertical="20dp"
+                            android:background="@color/cardview_light_background"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_prihlasovaci_heslo1_reg"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_marginVertical="5dp"
+                                android:background="@color/cardview_light_background"
+                                android:textSize="20sp"
+                                android:inputType="textPassword"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zadejte_ph2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_prihlasovaci_heslo2_reg"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginVertical="20dp"
+                            android:background="@color/cardview_light_background"
+                            app:errorEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_prihlasovaci_heslo2_reg"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_marginVertical="5dp"
+                                android:background="@color/cardview_light_background"
+                                android:textSize="20sp"
+                                android:inputType="textPassword"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </ScrollView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_registrovat"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="70dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/color_style"
+            android:text="@string/zaregistrovat"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

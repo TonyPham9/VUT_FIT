@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--@author Vít Janeček, xjanec30-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/jmeno_cisnika"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="cisnik"
+        android:layout_weight="1"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/remove_cisnik_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/odebrat_cisnika"
+        android:layout_marginEnd="5dp"/>
+
+</LinearLayout>
