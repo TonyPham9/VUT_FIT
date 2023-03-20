@@ -1,0 +1,40 @@
+.main-navbar{
+    border-bottom: 1px solid #ccc;
+}
+.main-navbar .navbar{
+    padding: 0px;
+    background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link{
+    padding: 8px 20px;
+    color: #000;
+    font-size: 15px;
+}
+.main-navbar .navbar .nav-item .nav-link:hover{
+    background-color: #b4b4b4;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-navbar .top-navbar .nav-link{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+.tg  {border-collapse:collapse;border-color:#93a1a1;border-spacing:0;margin-left: auto;margin-right: auto;width: 100%;padding-top: 5%;}
+.tg td{background-color:#fdf6e3;border-color:#93a1a1;border-style:solid;border-width:1px;color:#002b36;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#657b83;border-color:#93a1a1;border-style:solid;border-width:1px;color:#fdf6e3;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+table, th, td {
+    border: 1px solid black !important;
+    border-collapse: collapse !important;
+    text-align: center!important;
+  }
+  body,h1 {font-family: "Raleway", sans-serif}
+.fit_img{
+    width: 100%;
+    height: 850px;
+}
